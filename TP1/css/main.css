@@ -1,0 +1,72 @@
+
+body {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input, .card {
+    border: 1px solid rgb(145, 145, 145)  !important;
+}
+
+#info {
+    padding-top: 1.5em;
+}
+
+#current_temp {
+    font-family: "Anton";
+    font-size: 3em;
+}
+.header {
+    color: white;
+    font-family: "Anton";
+    font-size: 1.5em;
+    font-style: bold;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.btn-primary {
+    background-color: black!important;
+}
+
+.card-body {
+    color: black!important;
+    font-family: "Anton";
+    font-size: 1.5em;
+}
+
+.card-body #values p {
+    color: white!important;
+    font-family: "Anton";
+}
+
+.header2 {
+    background-color: black;
+    color: white;
+    font-family: "Anton";
+    font-size: 1.5em;
+    font-style: bold;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.temperatures {
+    font-family: "Anton";
+    padding-top: 1.5em;
+    font-size: 1.2em;
+}
+
+.other-info {
+    font-family: "Anton";
+    font-size: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+.weather_img {
+    max-width: 40%;
+}
