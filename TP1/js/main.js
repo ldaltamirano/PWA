@@ -1,4 +1,5 @@
-const API_KEY = '[OpenWeatherApiKey]'; 
+const API_KEY = 'f387c41b5f1be60f324f6dde6a4cc654'; //http://api.openweathermap.org/data/2.5/weather?q=London&appid=f387c41b5f1be60f324f6dde6a4cc654
+const GOOGLE_API_KEY = 'AIzaSyDqTrRpqrwq_PpxfNY_huUoE1olW1jAK5';
 const URL = 'http://api.openweathermap.org/data/2.5/weather'
 
 const button = document.getElementById("sendButton");
@@ -23,7 +24,7 @@ function search(city) {
     return response.json();
   }).then(result => {
     console.log('data',  JSON.stringify(result));
-    if(result.cod != undefined || result.cod != "400") {
+    if(result.cod == undefined || result.cod == "400") {
       throw new Error;
     } else {
       SetCityInfo(result);
@@ -57,7 +58,8 @@ function SetCityInfo(info) {
 
 
   city.textContent = info.name;
-  map.src = "https://www.google.com/maps/embed/v1/view?key=[GoogleApiKey]&zoom=14&center="+info.coord.lat+","+info.coord.lon;
+  // map.src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDqTrRpqrwq_PpxfNY_huUoE1olW1jAK5Q&center="+info.coord.lat+","+info.coord.lon+"&q=";
+  map.src = "https://www.google.com/maps/embed/v1/view?key=AIzaSyDqTrRpqrwq_PpxfNY_huUoE1olW1jAK5Q&zoom=14&center="+info.coord.lat+","+info.coord.lon;
   weather.value = info.weather[0].main;
   temp.textContent = info.main.temp+"ºC";
   temp_max.textContent = "Max: "+info.main.temp_max+"ºC";
